@@ -46,14 +46,17 @@ public class FournisseurRestController {
 		fournisseurService.deleteFournisseur(fournisseurId);
 	}
 
-	@PutMapping
-	public Fournisseur modifierFournisseur(@RequestBody Fournisseur fournisseur) {
-		return fournisseurService.updateFournisseur(fournisseur);
+// Mettre à jour un fournisseur existant
+	@PostMapping("/fournisseurs")
+	public Fournisseur mettreAJourFournisseur(@RequestBody Fournisseur fournisseur) {
+    	return fournisseurService.mettreAJourFournisseur(fournisseur);
 	}
 
-		@PutMapping(value = "/assignSecteurActiviteToFournisseur/{idSecteurActivite}/{idFournisseur}")
-		public void assignProduitToStock(@PathVariable("idSecteurActivite") Long idSecteurActivite, @PathVariable("idFournisseur") Long idFournisseur) {
-			fournisseurService.assignSecteurActiviteToFournisseur(idSecteurActivite, idFournisseur);
-		}
+// Assigner un secteur d'activité à un fournisseur existant
+	@PutMapping("/fournisseurs/{idFournisseur}/secteurs-activite/{idSecteurActivite}")
+	public void assignerSecteurActiviteToFournisseur(@PathVariable Long idFournisseur, @PathVariable Long idSecteurActivite) {
+    	fournisseurService.assignerSecteurActiviteToFournisseur(idFournisseur, idSecteurActivite);
+	}
+
 
 }
