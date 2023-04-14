@@ -27,7 +27,7 @@ public class FournisseurRestController {
 
 	@GetMapping
 	public List<Fournisseur> getFournisseurs() {
-		return fournisseurService.retrieveAllFournisseurs();
+		return fournisseurService.getAllFournisseurs();
 	}
 
 	@GetMapping("/{fournisseur-id}")
@@ -47,7 +47,7 @@ public class FournisseurRestController {
 	}
 
 	@PutMapping
-	public Fournisseur modifyFournisseur(@RequestBody Fournisseur fournisseur) {
+	public Fournisseur modifierFournisseur(@RequestBody Fournisseur fournisseur) {
 		return fournisseurService.updateFournisseur(fournisseur);
 	}
 
