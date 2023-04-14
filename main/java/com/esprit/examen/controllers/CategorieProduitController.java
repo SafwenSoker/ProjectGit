@@ -32,6 +32,7 @@ public class CategorieProduitController {
 	}
 
 	@GetMapping("/{categorieProduit-id}")
+	// i added a comment here to push it
 	public CategorieProduit retrieveCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
 		return categorieProduitService.retrieveCategorieProduit(categorieProduitId);
 	}
