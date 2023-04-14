@@ -29,7 +29,7 @@ public class OperateurController {
 	}
 
 	@PostMapping
-	public Operateur addOperateur(@RequestBody Operateur op) {
+	public Operateur ajouterOperateur(@RequestBody Operateur op) {
 		Operateur operateur = operateurService.addOperateur(op);
 		return operateur;
 	}
@@ -40,7 +40,7 @@ public class OperateurController {
 	}
 
 	@PutMapping
-	public Operateur modifyOperateur(@RequestBody Operateur operateur) {
+	public Operateur modifierOperateur(@RequestBody Operateur operateur) {
 		return operateurService.updateOperateur(operateur);
 	}
 
