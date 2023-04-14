@@ -27,7 +27,7 @@ public class FournisseurRestController {
 
 	@GetMapping
 	public List<Fournisseur> getFournisseurs() {
-		return fournisseurService.retrieveAllFournisseurs();
+		return fournisseurService.getAllFournisseurs();
 	}
 
 	@GetMapping("/{fournisseur-id}")
