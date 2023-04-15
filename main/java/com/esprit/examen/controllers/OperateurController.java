@@ -22,7 +22,7 @@ public class OperateurController {
 	}
 
 	@GetMapping("/{operateur-id}")
-	public Operateur retrieveOperateur(@PathVariable("operateur-id") Long operateurId) {
+	public Operateur getOperator(@PathVariable("operateur-id") Long operateurId) {
 		return operateurService.retrieveOperateur(operateurId);
 	}
 
