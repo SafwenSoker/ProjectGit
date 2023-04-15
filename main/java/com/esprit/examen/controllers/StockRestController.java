@@ -37,12 +37,12 @@ public class StockRestController {
 	}
 
 	@DeleteMapping("/{stock-id}")
-	public void removeStock(@PathVariable("stock-id") Long stockId) {
+	public void deleteStock(@PathVariable("stock-id") Long stockId) {
 		stockService.deleteStock(stockId);
 	}
 
 	@PutMapping
-	public Stock modifyStock(@RequestBody Stock stock) {
+	public Stock modfierStock(@RequestBody Stock stock) {
 		return stockService.updateStock(stock);
 	}
 
