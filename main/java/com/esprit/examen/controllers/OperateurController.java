@@ -27,18 +27,18 @@ public class OperateurController {
 	}
 
 	@PostMapping
-	public Operateur addOperateur(@RequestBody Operateur op) {
+	public Operateur ajouterOperateur(@RequestBody Operateur op) {
 		Operateur operateur = operateurService.addOperateur(op);
 		return operateur;
 	}
 
 	@DeleteMapping("/{operateur-id}")
-	public void deleteOperateur(@PathVariable("operateur-id") Long operateurId) {
+	public void removeOperateur(@PathVariable("operateur-id") Long operateurId) {
 		operateurService.deleteOperateur(operateurId);
 	}
 
 	@PutMapping
-	public Operateur modifyOperateur(@RequestBody Operateur operateur) {
+	public Operateur modifierOperateur(@RequestBody Operateur operateur) {
 		return operateurService.updateOperateur(operateur);
 	}
 
