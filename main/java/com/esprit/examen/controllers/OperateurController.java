@@ -28,8 +28,8 @@ public class OperateurController {
 
 	@PostMapping
 	public Operateur Operateur(@RequestBody Operateur op) {
-		Operateur ope = operateurService.addOperateur(op);
-		return ope;
+		Operateur ope = operateurService.addOperateur(oprat);
+		return operat;
 	}
 
 	@DeleteMapping("/{operateur-id}")
