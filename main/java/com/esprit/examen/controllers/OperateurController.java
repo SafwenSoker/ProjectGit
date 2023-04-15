@@ -1,12 +1,10 @@
 package com.esprit.examen.controllers;
 
 import java.util.List;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import com.esprit.examen.entities.Operateur;
 import com.esprit.examen.services.IOperateurService;
-
 import io.swagger.annotations.Api;
 
 @RestController
