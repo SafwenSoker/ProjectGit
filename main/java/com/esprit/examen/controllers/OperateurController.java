@@ -17,14 +17,10 @@ public class OperateurController {
 	private final IOperateurService operateurService;
 	
 	@GetMapping
-	public List<Operateur> getOperateurs() {
+	public List<Operateur> addOperator() {
 		return operateurService.retrieveAllOperateurs();
 	}
 
-	@GetMapping("/{operateur-id}")
-	public Operateur getOperator(@PathVariable("operateur-id") Long operateurId) {
-		return operateurService.retrieveOperateur(operateurId);
-	}
 
 	@PostMapping
 	public Operateur ajouterOperateur(@RequestBody Operateur op) {
