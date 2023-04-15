@@ -30,21 +30,8 @@ public class StockRestController {
 		return stockService.retrieveStock(stockId);
 	}
 
-	@PostMapping
-	public Stock addStock(@RequestBody Stock s) {
-		Stock stock = stockService.addStock(s);
-		return stock;
-	}
 
-	@DeleteMapping("/{stock-id}")
-	public void removeStock(@PathVariable("stock-id") Long stockId) {
-		stockService.deleteStock(stockId);
-	}
 
-	@PutMapping
-	public Stock modifyStock(@RequestBody Stock stock) {
-		return stockService.updateStock(stock);
-	}
 
 	/*
 	 * Spring Scheduler : Comparer QteMin tolérée (à ne pa dépasser) avec
