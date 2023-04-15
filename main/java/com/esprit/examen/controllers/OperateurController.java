@@ -24,12 +24,10 @@ public class OperateurController {
 	}
 
 	@GetMapping("/{operateur-id}")
-	public Operateur retrieveOperateur(@PathVariable("operateur-id") Long operateurId) {
-		return operateurService.retrieveOperateur(operateurId);
-	}
+
 
 	@PostMapping
-	public Operateur ajouterOperateur(@RequestBody Operateur op) {
+	public Operateur Operateur(@RequestBody Operateur op) {
 		Operateur operateur = operateurService.addOperateur(op);
 		return operateur;
 	}
